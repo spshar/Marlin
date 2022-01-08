@@ -98,7 +98,8 @@
 #define FAN_PIN            PA10  // PRINT FAN
 #define FAN1_PIN           PA9   // HOTEND FAN
 
-#ifndef E0_AUTO_FAN_PIN
+#ifdef E0_AUTO_FAN_PIN
+  #undef E0_AUTO_FAN_PIN
   #define E0_AUTO_FAN_PIN  FAN1_PIN
 #endif
 
